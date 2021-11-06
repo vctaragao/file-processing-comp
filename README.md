@@ -1,0 +1,1 @@
+# Projeto para testar como diferentes linguagens processam um arquivo que passa do seu limite de memória
