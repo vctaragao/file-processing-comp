@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+    php:
+        build: ./php
+        container_name: php-file-processor
+        tty: true
+        volumes:
+            - ./php:/app
+            - ./gen_report.csv:/app/gen_report.csv
+            - ./php/99_overrides.ini:/etc/php/8.0/cli/conf.d/99_overrides.ini
