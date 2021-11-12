@@ -1,6 +1,16 @@
 version: '3.9'
 
 services:
+
+    node:
+        build: ./node
+        container_name: node-file-processor
+        tty: true
+        volumes:
+            - ./node:/app
+            - ./gen_report.csv:/app/gen_report.csv
+            - ./gen_report_13MB.csv:/app/gen_report_13MB.csv
+
     php:
         build: ./php
         container_name: php-file-processor
@@ -9,6 +19,7 @@ services:
             - ./php:/app
             - ./gen_report.csv:/app/gen_report.csv
             - ./php/99_overrides.ini:/etc/php/8.0/cli/conf.d/99_overrides.ini
+            - ./gen_report_13MB.csv:/app/gen_report_13MB.csv
 
     elixir:
         build: ./elixir
@@ -17,3 +28,4 @@ services:
         volumes:
             - ./elixir:/app
             - ./gen_report.csv:/app/gen_report.csv
+            - ./gen_report_13MB.csv:/app/gen_report_13MB.csv

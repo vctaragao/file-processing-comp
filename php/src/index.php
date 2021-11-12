@@ -2,7 +2,7 @@
 // Thats not how a php code looks like in the real world, its just a script to test a process
 
 
-$file = fopen(__DIR__ . '/../gen_report.csv', 'r');
+$file = fopen(__DIR__ . '/../gen_report_13MB.csv', 'r');
 
 $lines = readCsvLine($file);
 
@@ -13,7 +13,7 @@ foreach ($lines as $line) {
 }
 
 echo "Tempo de execução: " . round((microtime(true) - $start), 2) . "s" . PHP_EOL;
-echo "Memória alocada: " . (memory_get_usage(true) / 1048576) . "Mb" . PHP_EOL;
+echo "Memória alocada: " . (memory_get_usage(true) / 1048576) . " Mb" . PHP_EOL;
 
 
 function readCsvLine($file)

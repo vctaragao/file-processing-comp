@@ -16,11 +16,11 @@ parse_memory = fn _ ->
 end
 
 show_memory = fn memory ->
-  IO.puts("Memória alocada: #{memory}Mb")
+  IO.puts("Memória alocada: #{memory} Mb")
 end
 
 :timer.tc(fn ->
-  File.stream!("/app/gen_report.csv")
+  File.stream!("/app/gen_report_13MB.csv")
   |> Enum.each(fn _ -> nil end)
 
   :ok
