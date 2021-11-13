@@ -2,6 +2,12 @@
 
 Para o processamento de um arquivo que vai além da capacidade memória de um processo em uma determinada linguágem é necessário fazer o parseamento por partes utilizando alguma espécie de lazyness, no caso de arquivos esse processamento por parte é feito através de `streams` nas linguagens aqui implementadas.
 
+---
+
+## Resultado: Tempo de execução
+1. :1st_place_medal: Elixir (.55s) ![0.55s](https://progress-bar.dev/55/?scale=1000&sufix=&color=green)
+2. :2nd_place_medal: PHP8 (1,95s) ![195s](https://progress-bar.dev/195/?scale=1000&suffix=&color=yellow)
+3.  :3rd_place_medal: Node (3,02s) ![302s](https://progress-bar.dev/302/?scale=1000&suffix=&color=red)
 ## Para o uso desse projeto são necessários as tecnologias
 - [Docker](https://docs.docker.com/engine/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
